@@ -7,8 +7,8 @@ public class elementOne
 {   public string sciezka { get; set; }
 
     public string witryna { get; set; }
-   
 
+    public string description { get; set; }
 
 
 
@@ -369,7 +369,9 @@ public class elementOne
 
 
 
-   
+
+
+
 
 
 

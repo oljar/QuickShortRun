@@ -39,7 +39,7 @@ namespace CrudOwn.Widok
             
             Jump.UstawJumpList();
             string aa = GetExplorer.GetActiveFolder();
-            MessageBox.Show(aa, "Aktywny folder", MessageBoxButton.OK, MessageBoxImage.Information);
+      
 
 
         }

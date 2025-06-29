@@ -13,7 +13,9 @@
     </Window.DataContext>
     <Grid>
         <StackPanel>
-            <Button  Content="Dodaj" HorizontalAlignment="Center" Command="{Binding Dodaj}" Height="410" Width="396" />
+            <Button  Content="Dodaj" Command="{Binding Dodaj}" Height="154" Width="396" />
+
+            <TextBox TextWrapping="Wrap" Text="{Binding description}" FontFamily="Cascadia Mono" FontSize="20"  Width="390" Height="93"/>
 
         </StackPanel>
 

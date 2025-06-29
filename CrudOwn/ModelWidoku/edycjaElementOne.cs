@@ -48,6 +48,19 @@ namespace CrudOwn.ModelWidoku
             }
         }
 
+        public string description
+        {
+            get
+            {
+                return model.description;
+            }
+            set
+            {
+                model.description = value;
+                onPropertyChanged(nameof(description));
+            }
+        }
+
         public edycjaElementOne()
         {
             this.sciezka = Jump.PobierzSciezke();
@@ -78,10 +91,12 @@ namespace CrudOwn.ModelWidoku
         {
             string Explopath = GetExplorer.GetActiveFolder();
 
-            string sciezkaPliku = "dane.txt";
-            
+          
 
-            File.AppendAllText(sciezkaPliku, Explopath+"=skrót;" + Environment.NewLine);
+            string sciezkaPliku = "dane.txt";
+           
+
+            File.AppendAllText(sciezkaPliku, Explopath + "=" + description + ";" + Environment.NewLine);
 
             MessageBox.Show("Nowa wartość została dopisana.");
 
