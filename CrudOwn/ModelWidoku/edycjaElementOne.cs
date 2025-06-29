@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Xml.Linq;
+using System.IO;
+
 
 namespace CrudOwn.ModelWidoku
 {
@@ -53,10 +55,45 @@ namespace CrudOwn.ModelWidoku
         }
 
 
+        #region dodaj
+
+        private RelayCommand dodaj;
+
+
+        public ICommand Dodaj
+        {
+            get
+            {
+                if (dodaj == null)
+                {
+                    dodaj = new RelayCommand(PerformDodaj);
+                }
+
+                return dodaj;
+            }
+        }
+
+        private void PerformDodaj(object commandParameter)
+
+        {
+            string Explopath = GetExplorer.GetActiveFolder();
+
+            string sciezkaPliku = "dane.txt";
+            
+
+            File.AppendAllText(sciezkaPliku, Explopath+"=skrót;" + Environment.NewLine);
+
+            MessageBox.Show("Nowa wartość została dopisana.");
+
+
+        }
+
+        #endregion
+
     }
 
 
-    
+
 }
 
             

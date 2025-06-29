@@ -12,16 +12,13 @@
         <mw:edycjaElementOne/>
     </Window.DataContext>
     <Grid>
-
-
-
         <StackPanel>
-           
+            <Button  Content="Dodaj" HorizontalAlignment="Center" Command="{Binding Dodaj}" Height="410" Width="396" />
 
         </StackPanel>
-               
 
-               
+
+
 
 
 
