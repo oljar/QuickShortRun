@@ -1,24 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Messaging;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Forms;
-
-namespace CrudOwn.Services
+﻿namespace warsztat
 {
-    public static class NazwySciezek
+    internal class Program
     {
-        public static string witryna = "onet.pl";
-        public static string sciezka = "C:\\Users\\Admin\\source\\repos\\CrudOwn\\CrudOwn\\bin\\Debug\\CrudOwn.exe";
-
-        // Fix: Change the return type of the method to match the returned value  
-        public static List<Dictionary<string, string>> MakeDict()
+        static void Main(string[] args)
         {
-            string filePath = "dane.txt";
+            string filePath = "C:\\Users\\Admin\\source\\repos\\QuickShortRun\\warsztat\\dane.txt";
             List<Dictionary<string, string>> kolekcjaSlownikow = new List<Dictionary<string, string>>();
 
             foreach (var linia in File.ReadAllLines(filePath))
@@ -37,10 +23,15 @@ namespace CrudOwn.Services
                 kolekcjaSlownikow.Add(slownik);
             }
 
-           
-            return kolekcjaSlownikow;
+            foreach (var a in kolekcjaSlownikow)
+            {
+                Console.WriteLine("Nowy słownik:");
+                foreach (var para in a)
+                {
+                    Console.WriteLine($"  {para.Key}: {para.Value}");
+                }
+            }
         }
     }
 }
-
 

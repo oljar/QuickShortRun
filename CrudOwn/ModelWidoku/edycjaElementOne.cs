@@ -19,8 +19,7 @@ namespace CrudOwn.ModelWidoku
     {
         public elementOne model = new elementOne("");
 
-
-       
+        
 
         public string sciezka
         {
@@ -35,8 +34,6 @@ namespace CrudOwn.ModelWidoku
             }
         }
 
-
-
         public string witryna
         {
             get
@@ -48,30 +45,17 @@ namespace CrudOwn.ModelWidoku
                 model.witryna = value;
                 onPropertyChanged(nameof(witryna));
             }
-
-
-
-
-
         }
-
-
-
-
-
-
-
-
 
         public edycjaElementOne()
         {
             this.sciezka = Jump.PobierzSciezke();
             this.witryna = Jump.PobierzWitryne();
         }
+
+
     }
-
-
-        }
+}
 
             
             
