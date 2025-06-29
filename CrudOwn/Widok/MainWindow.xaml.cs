@@ -1,6 +1,6 @@
 ﻿using CrudOwn.ModelWidoku;
 using Kolory_WPF.ModelWidoku;
-using MahApps.Metro.Controls;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +21,7 @@ namespace CrudOwn.Widok
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class MainWindow 
     {
         public MainWindow()
         {
