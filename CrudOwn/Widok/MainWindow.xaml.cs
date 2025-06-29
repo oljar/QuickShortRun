@@ -1,4 +1,5 @@
 ﻿using CrudOwn.ModelWidoku;
+using CrudOwn.Services;
 using Kolory_WPF.ModelWidoku;
 
 using System;
@@ -37,7 +38,9 @@ namespace CrudOwn.Widok
         {
             
             Jump.UstawJumpList();
-            Prog.Sciezka();
+            string aa = GetExplorer.GetActiveFolder();
+            MessageBox.Show(aa, "Aktywny folder", MessageBoxButton.OK, MessageBoxImage.Information);
+
 
         }
 

@@ -125,6 +125,7 @@
     <Compile Include="..\..\..\..\Desktop\Jump.cs">
       <Link>Services\Jump.cs</Link>
     </Compile>
+    <Compile Include="Services\GetExplorer.cs" />
     <Compile Include="Services\Nazwy_sciezek.cs" />
     <Compile Include="Services\WindowService.cs" />
     <Page Include="Widok\MainWindow.xaml">

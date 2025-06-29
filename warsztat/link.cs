@@ -1,10 +1,15 @@
 ﻿using SHDocVw;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace warsztat
 {
-    public static class Prog
+    public class link
     {
-        public static void Main()
+        public static void Sciezka()
         {
             ShellWindows shellWindows = new ShellWindows();
 
@@ -15,8 +20,14 @@ namespace warsztat
                     dynamic document = window.Document;
                     string folderPath = document.Folder.Self.Path;
                     Console.WriteLine("Aktywny folder: " + folderPath);
+                   
                 }
             }
         }
     }
 }
+    
+
+    
+    
+
